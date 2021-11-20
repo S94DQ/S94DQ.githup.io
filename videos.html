@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style 1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bb378f8018.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <title>My videos</title>
+</head>
+<body style="background-color: black;" oncontextmenu="return false">
+    <nav style="background-color: black;">
+        <h2 class="logo">Design<span>X</span></h2>
+        <ul>
+            <li><a  href="index.html">Home</a></li>
+            <li><a href="about project.html">About Sadeq</a></li>
+            <li><a href="gallery.html">Gallary</a></li>
+            <li><a style="background-color: #f9004d;" href="videos.html">videos</a></li>
+            <li><a href="https://www.w3schools.com/">websites for programming</a></li>
+            <li><a href="#contact">Contact Sadeq</a></li>
+        </ul>
+        <a href="#" class="btn1">V 1.00</a>
+    </nav>
+
+    <div class="container">
+        <div id="video_player">
+            <video controls poster="" class="video" id="video">
+                <source src="videos/. (1).mp4" type="video/mp4">
+                <source src="" type="video/mp4">
+            </video>
+            <div style=" height: 870px ;background-color: #f9004d;" class="scrollBox">
+                <div class="box">
+                    <img src="Vid.imgs/2.png">
+                    <div class="box-content">
+                        <h3>VID 2</h3>
+                        <a href="videos/. (2).mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Vid.imgs/3.png">
+                    <div class="box-content">
+                        <h3>vid 3</h3>
+                        <a href="videos/. (3).mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Vid.imgs/4.png">
+                    <div class="box-content">
+                        <h3>vid 3</h3>
+                        <a href="videos/. (4).mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Vid.imgs/5.png">
+                    <div class="box-content">
+                        <h3>vid 4</h3>
+                        <a href="videos/. (5).mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="vid.imgs/6.png">
+                    <div class="box-content">
+                        <h3>vid 5</h3>
+                        <a href="videos/. (6).mp4"class="btn">Watch</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="Vid.imgs/7.png">
+                    <div class="box-content">
+                        <h3>vid 6</h3>
+                        <a href="videos/. (7).mp4" class="btn">Watch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ###########################javascript for vidoe Player################ -->
+
+    <script type="text/javascript">
+        let anchors = document.querySelectorAll('div .btn');
+    let links = [...anchors];
+    
+    for (let i=0; i<links.length; i++) {
+        links[i].onclick = handler;
+    }
+    function handler(e) {
+        e.preventDefault();
+        let videotarget = this.getAttribute("href");
+        let filename = videotarget.substr(0, videotarget.lastIndexOf('.'));
+        let video = document.getElementById("video");
+        video.removeAttribute("poster");
+        let source = document.querySelectorAll("#video_player video source");
+        source[0].src = filename + ".mp4";
+        source[1].src = filename + ".m4v";
+        video.load();
+        video.play();
+    }
+    </script>
+    <section id="contact">
+		<p>Sadeq Ameen</p>
+		<p>Thats my first project in web desining please tell me if it was impressive</p>
+		<div class="social">
+			<a href="#"><i class="fab fa-facebook-f"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-dribbble"></i></a>
+		</div>
+		<div class="social"><a href=""><i class="fas fa-smile-beam"></i></i></a></div>
+					<p class="end">Have a good day</p></div>
+	</section>
+</html>
